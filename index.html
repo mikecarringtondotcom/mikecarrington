@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang"en">
+<html lang="en">
 
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mike Carrington Portfolio Site</title>
@@ -17,17 +19,189 @@
                 );
                 background-attachment: fixed;  
             
-                .montserrat-base {
+                
                 font-family: "Montserrat", sans-serif;
                 font-optical-sizing: auto;
                 font-weight: 400;
                 font-style: normal;
+                
+            }
+
+            h1{
+                color: rgb(224, 224, 224);
+                font-size: 3.5em;
+                font-weight: 400;
+                text-align: left;
+                font-family: "Montserrat", sans-serif;
+                transition: all 0.3s ease;
+                
+            }
+
+            .chat-window {
+                text-align: center;
+                margin-right: 50px;
+                margin-left: 50px;
+                bottom: 20px;
+                right: 20px;
+                width: auto;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            .chat-window input[type="text"] {
+                margin-top: 275px;
+                margin-bottom: 10px;
+                border-style: inset;
+                border-width: 1px;
+                width: 450px;
+                padding: 10px;
+                border-radius: 25px;
+                background: rgb(69, 69, 69); /* Change background color */
+                font-family: "Montserrat", sans-serif; /* Change font */
+                color: rgb(224, 224, 224); /* Text color */
+            }
+
+            .chat-window input[type="text"]:focus {
+            transition: border 0.5s, color 0.5s;
+            outline: rgb(224,224,224);
+            border: 3px solid rgb(224,224,224);
+            }
+
+            
+
+            .chat-window .close {
+                background: rgb(224, 224, 224); /* Change background color */
+                font-family: "Montserrat", sans-serif; /* Change font */
+                color: rgb(69,69,69); /* Text color */
+                border: none;
+                cursor: pointer;
+            }
+
+            .chat-window .send {
+                border-radius: 25px;
+                border-style: inset;
+                border-width: 1.5px;
+                padding: 10px;
+                background: rgb(69,69,69); /* Change background color */
+                font-family: "Montserrat", sans-serif; /* Change font */
+                color: rgb(224,224,224); /* Text color */
+                border: solid inset rgb(69,69,69);
+                cursor: pointer;
+            }
+
+                .chat-window .send:hover {
+                transition: background 0.5s, color 0.5s;
+                background: rgb(45,45,45); /* Change background color */
+                color: rgb(224,224,224); /* Keep text light for contrast */
+            }
+
+            /* Tablet breakpoint */
+            @media screen and (max-width: 768px) {
+                h1 {
+                    font-size: 1.8rem;
+                }
+            }
+
+            /* Mobile breakpoint */
+            @media screen and (max-width: 480px) {
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            /* Very small screens */
+            @media screen and (max-width: 320px) {
+                h1 {
+                    font-size: 1.3rem;
+                }
+            }
+
+            h2{
+                color: rgb(224, 224, 224);
+                font-size: 2.5em;
+                font-weight: 400;
+                text-align: left;
+                font-family: "Montserrat", sans-serif;
+                transition: all 0.3s ease;
+                
+            }
+
+            /* Tablet breakpoint */
+            @media screen and (max-width: 768px) {
+                h2 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            /* Mobile breakpoint */
+            @media screen and (max-width: 480px) {
+                h2 {
+                    font-size: 1.25rem;
+                }
+
+                .chat-window {
+                text-align: center;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 250;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                }
+
+                .chat-window input[type="text"] {
+                margin-top: 275px;
+                margin-bottom: 10px;
+                width: auto;
+                padding: 5px;
+                border-radius: 25px;
+                background: rgb(69, 69, 69); /* Change background color */
+                font-family: "Montserrat", sans-serif; /* Change font */
+                color: rgb(224, 224, 224); /* Text color */
+                }
+            }
+
+            /* Very small screens */
+            @media screen and (max-width: 320px) {
+                h2 {
+                    font-size: 1rem;
                 }
             }
         </style>
     </head>
 
-    <body>
+    <body>      
+        <hr>
         <h1>Michael Carrington</h1>
+        <hr>
+        
+        <section class="chat-window">
+            <button class="close">
+                x close
+            </button>
+            <div class="chat">
+                <div class="model">
+                    <p> Ask about me! </p>
+                </div>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Type your message here..." />
+                <button class="send">Send</button>
+        </section>
+
+
+        <script src="main.js"></script>
+
+        <h2>
+            About Me
+        </h2>
     </body>
 </html>
